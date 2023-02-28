@@ -1,3 +1,8 @@
+CREATE TABLE users (
+  username text PRIMARY KEY,
+  password text NOT NULL
+);
+
 CREATE TABLE todolists (
   id serial PRIMARY KEY,
   title text UNIQUE NOT NULL,
@@ -12,7 +17,3 @@ CREATE TABLE todos (
   username text NOT NULL REFERENCES users(username)
 );
 
-CREATE TABLE users (
-  username text PRIMARY KEY,
-  password text NOT NULL
-);
